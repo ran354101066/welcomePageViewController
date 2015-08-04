@@ -14,6 +14,7 @@
 		345C2DD01B708C2B00B71367 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 345C2DCF1B708C2B00B71367 /* Images.xcassets */; };
 		345C2DD31B708C2B00B71367 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 345C2DD11B708C2B00B71367 /* LaunchScreen.xib */; };
 		345C2DDF1B708C2B00B71367 /* WelcomePageTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 345C2DDE1B708C2B00B71367 /* WelcomePageTests.m */; };
+		345C2DEB1B708C5100B71367 /* WelcomePageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 345C2DEA1B708C5100B71367 /* WelcomePageView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +41,8 @@
 		345C2DD81B708C2B00B71367 /* WelcomePageTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WelcomePageTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		345C2DDD1B708C2B00B71367 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		345C2DDE1B708C2B00B71367 /* WelcomePageTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WelcomePageTests.m; sourceTree = "<group>"; };
+		345C2DE91B708C5100B71367 /* WelcomePageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WelcomePageView.h; sourceTree = "<group>"; };
+		345C2DEA1B708C5100B71367 /* WelcomePageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WelcomePageView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,6 +88,7 @@
 				345C2DC71B708C2B00B71367 /* AppDelegate.m */,
 				345C2DC91B708C2B00B71367 /* ViewController.h */,
 				345C2DCA1B708C2B00B71367 /* ViewController.m */,
+				345C2DE81B708C5100B71367 /* WelcomePage */,
 				345C2DCC1B708C2B00B71367 /* Main.storyboard */,
 				345C2DCF1B708C2B00B71367 /* Images.xcassets */,
 				345C2DD11B708C2B00B71367 /* LaunchScreen.xib */,
@@ -117,6 +121,15 @@
 				345C2DDD1B708C2B00B71367 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		345C2DE81B708C5100B71367 /* WelcomePage */ = {
+			isa = PBXGroup;
+			children = (
+				345C2DE91B708C5100B71367 /* WelcomePageView.h */,
+				345C2DEA1B708C5100B71367 /* WelcomePageView.m */,
+			);
+			path = WelcomePage;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -219,6 +232,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				345C2DEB1B708C5100B71367 /* WelcomePageView.m in Sources */,
 				345C2DCB1B708C2B00B71367 /* ViewController.m in Sources */,
 				345C2DC81B708C2B00B71367 /* AppDelegate.m in Sources */,
 				345C2DC51B708C2B00B71367 /* main.m in Sources */,

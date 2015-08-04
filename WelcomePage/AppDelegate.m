@@ -7,7 +7,8 @@
 //
 
 #import "AppDelegate.h"
-
+#import "ViewController.h"
+#import "WelcomePageView.h"
 @interface AppDelegate ()
 
 @end
@@ -16,7 +17,31 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    // Override point for customization after application launch.
+    self.window = [[UIWindow alloc]initWithFrame:[[UIScreen mainScreen]bounds]];
+    self.window.backgroundColor = [UIColor redColor];
+    [self.window makeKeyAndVisible];
+    
+    //根据版本号加载
+    NSString *versionNumber = [NSString stringWithFormat:@"v%@", [[NSBundle mainBundle] objectForInfoDictionaryKey:(NSString*)kCFBundleVersionKey]];
+    
+    NSString *isShow = [[NSUserDefaults standardUserDefaults] objectForKey:@"IsShow"];
+    if (isShow == nil || ![isShow isEqualToString:versionNumber]) {
+        
+        [[NSUserDefaults standardUserDefaults] setObject:versionNumber forKey:@"IsShow"];
+        [[NSUserDefaults standardUserDefaults] synchronize];
+        WelcomePageView * welcomeView = [[WelcomePageView alloc]initWithFrame:self.window.bounds];
+        [self.window addSubview:welcomeView];
+        
+    }else
+    {
+        ViewController * vc = [[ViewController alloc]init];
+        self.window.rootViewController = vc;
+    }
+    
+    
+    
+    
+    
     return YES;
 }
 
